@@ -4,10 +4,10 @@ from rest_framework import pagination, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from skymarket.ads.models import Ad, Comment, Mymodel
-from skymarket.ads.permissions import IsOwner
-from skymarket.ads.serializers import AdSerializer, AdDetailSerializer, CommentSerializer, MyModelSerializer
-from skymarket.skymarket.filters import MyModelFilter
+from .filters import MyModelFilter
+from .models import Ad, Comment, Mymodel
+from .permissions import IsOwner
+from .serializers import AdSerializer, AdDetailSerializer, CommentSerializer, MyModelSerializer
 
 
 class AdPagination(pagination.PageNumberPagination):

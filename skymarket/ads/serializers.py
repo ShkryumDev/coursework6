@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from skymarket.ads.models import Ad, Comment, Mymodel
+from .models import Ad, Comment, Mymodel
 
 
 class CommentSerializer(serializers.ModelSerializer):

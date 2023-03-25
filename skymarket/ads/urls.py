@@ -2,7 +2,7 @@ from django.urls import include, path
 from rest_framework.routers import SimpleRouter
 from rest_framework_nested.routers import NestedSimpleRouter
 
-from skymarket.ads.views import AdViewSet, CommentViewSet
+from .views import AdViewSet, CommentViewSet
 
 ads_router = SimpleRouter()
 ads_router.register("ads", AdViewSet, basename="ads")

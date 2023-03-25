@@ -1,6 +1,6 @@
 import django_filters
 
-from skymarket.ads.models import Mymodel
+from .models import Mymodel
 
 
 class MyModelFilter(django_filters.rest_framework.FilterSet):
