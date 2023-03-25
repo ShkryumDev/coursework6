@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from skymarket.ads.models import Ad, Comment
+from skymarket.ads.models import Ad, Comment, Mymodel
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -32,4 +32,10 @@ class AdDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ad
+        fields = '__all__'
+
+
+class MyModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Mymodel
         fields = '__all__'

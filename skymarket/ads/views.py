@@ -4,9 +4,9 @@ from rest_framework import pagination, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from skymarket.ads.models import Ad, Comment
+from skymarket.ads.models import Ad, Comment, Mymodel
 from skymarket.ads.permissions import IsOwner
-from skymarket.ads.serializers import AdSerializer, AdDetailSerializer, CommentSerializer
+from skymarket.ads.serializers import AdSerializer, AdDetailSerializer, CommentSerializer, MyModelSerializer
 from skymarket.skymarket.filters import MyModelFilter
 
 
@@ -52,5 +52,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class MyModelViewSet(viewsets.ModelViewSet):
+    queryset = Mymodel.objects.all()
     filter_backends = (DjangoFilterBackend,)
+    serializer_class = MyModelSerializer
     filterset_class = MyModelFilter

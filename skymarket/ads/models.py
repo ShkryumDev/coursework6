@@ -15,3 +15,9 @@ class Comment(models.Model):
     author = models.ForeignKey('users.User', on_delete=models.CASCADE)
     ad = models.ForeignKey(Ad, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Mymodel(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
